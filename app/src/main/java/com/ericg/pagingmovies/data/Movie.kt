@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Movie(
     @SerializedName("title")
-    val title: String?,
+    val title: String,
     @SerializedName("backdrop_path")
     val path: String?
 ): Parcelable

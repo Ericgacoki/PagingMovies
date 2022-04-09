@@ -52,9 +52,3 @@ fun MovieItem(
         )
     }
 }
-
-@Preview
-@Composable
-fun MovieItemPreview() {
-    MovieItem(imageUrl = "", title = "This is a Title")
-}

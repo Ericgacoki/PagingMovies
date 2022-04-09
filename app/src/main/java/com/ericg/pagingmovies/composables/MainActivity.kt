@@ -31,7 +31,7 @@ class MainActivity() : ComponentActivity() {
                     LazyColumn() {
                         items(movieItems) { movie ->
                             MovieItem(
-                                imageUrl = movie!!.path,
+                                imageUrl = "https://image.tmdb.org/t/p/w780/${movie!!.path}",
                                 title = movie!!.title
                             )
                         }
