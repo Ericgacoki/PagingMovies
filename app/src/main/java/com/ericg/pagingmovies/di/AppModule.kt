@@ -2,15 +2,13 @@ package com.ericg.pagingmovies.di
 
 import com.ericg.pagingmovies.data.APIService
 import com.ericg.pagingmovies.repository.MoviesRepository
+import com.ericg.pagingmovies.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -20,7 +18,7 @@ object AppModule {
     @Provides
     fun provideAPI(): APIService{
         return Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/")
+            .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(APIService::class.java)

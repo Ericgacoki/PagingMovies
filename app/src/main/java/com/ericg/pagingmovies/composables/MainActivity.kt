@@ -20,22 +20,12 @@ class MainActivity() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val viewModel: MovieViewModel = hiltViewModel()
-            val movieItems = viewModel.movies.value.collectAsLazyPagingItems()
-
             PagingMoviesTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    LazyColumn() {
-                        items(movieItems) { movie ->
-                            MovieItem(
-                                imageUrl = "https://image.tmdb.org/t/p/w780/${movie!!.path}",
-                                title = movie!!.title
-                            )
-                        }
-                    }
+                    MoviesList()
                 }
             }
         }
