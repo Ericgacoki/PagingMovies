@@ -1,4 +1,4 @@
-package com.ericg.pagingmovies
+package com.ericg.pagingmovies.composables
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

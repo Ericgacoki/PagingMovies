@@ -82,4 +82,7 @@ dependencies {
 
     // Pagination
     implementation "androidx.paging:paging-compose:1.0.0-alpha14"
+
+    // Image loader
+    implementation "com.github.skydoves:landscapist-coil:$coilVersion"
 }
