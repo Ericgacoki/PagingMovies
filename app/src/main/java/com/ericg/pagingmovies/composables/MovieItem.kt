@@ -21,8 +21,8 @@ import com.skydoves.landscapist.coil.CoilImage
 
 @Composable
 fun MovieItem(
-    imageUrl: String,
-    title: String
+    imageUrl: String?,
+    title: String?
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -47,7 +47,7 @@ fun MovieItem(
         )
 
         Text(
-            text = title,
+            text = title ?: "",
             modifier = Modifier.padding(start = 8.dp)
         )
     }
