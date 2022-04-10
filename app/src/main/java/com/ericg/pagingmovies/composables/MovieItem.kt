@@ -12,7 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.ericg.pagingmovies.R
 import com.ericg.pagingmovies.data.Movie
 import com.skydoves.landscapist.CircularReveal
@@ -48,6 +50,8 @@ fun MovieItem(
 
         Text(
             text = movie.title,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(start = 8.dp)
         )
     }
