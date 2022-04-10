@@ -1,6 +1,6 @@
 ## PagingMovies
 
-<p align="center"> <img src="media/compose-tmdb.png"> </p>
+<p align="center"> <img src="media/compose-tmdb-dark.png"> </p>
 
 A demo app on how to load popular movies from TMDB API using Retrofit, and Paging in Compose!
 
