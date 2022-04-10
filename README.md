@@ -1,7 +1,11 @@
 ## PagingMovies
-A demo app on how to load  popular movies from TMDB API using Retrofit, and Paging in Compose!
+
+<p align="center"> <img src="media/compose-tmdb.png"> </p>
+
+A demo app on how to load popular movies from TMDB API using Retrofit, and Paging in Compose!
 
 ### Tech Stack
+
 - MVVM Architechture
 - Retrofit
 - Jetpack Compose
@@ -9,3 +13,5 @@ A demo app on how to load  popular movies from TMDB API using Retrofit, and Pagi
 - Landscapist Coil Image Loader
 
 ### Demo
+
+![Paging demo gif](media/paging-demo.gif)
