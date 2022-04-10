@@ -12,24 +12,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ericg.pagingmovies.R
+import com.ericg.pagingmovies.data.Movie
 import com.skydoves.landscapist.CircularReveal
 import com.skydoves.landscapist.ShimmerParams
 import com.skydoves.landscapist.coil.CoilImage
 
 @Composable
 fun MovieItem(
-    imageUrl: String?,
-    title: String?
+   movie: Movie
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.Start
     ) {
+        val image = "https://image.tmdb.org/t/p/w780/${movie.path}"
         CoilImage(
-            imageModel = imageUrl,
+            imageModel = image,
             circularReveal = CircularReveal(duration = 1000),
             shimmerParams = ShimmerParams(
                 baseColor = Color.DarkGray,
@@ -47,7 +47,7 @@ fun MovieItem(
         )
 
         Text(
-            text = title ?: "",
+            text = movie.title,
             modifier = Modifier.padding(start = 8.dp)
         )
     }
